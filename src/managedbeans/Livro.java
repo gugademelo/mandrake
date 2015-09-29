@@ -10,9 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 import TO.Autor;
+import TO.Categoria;
 import database.ConnectionFactory;
 import managedbeans.Editora;
-import managedbeans.Categoria;
 
 public class Livro {
 	private Integer livro_id;
