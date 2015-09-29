@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import TO.Livro;
+
 public class Carrinho {
 	private List<Livro> livros = new ArrayList<Livro>();
 	private double subTotal;
