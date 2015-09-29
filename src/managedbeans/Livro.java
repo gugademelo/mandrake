@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import TO.Autor;
 import database.ConnectionFactory;
-import managedbeans.Autor;
 import managedbeans.Editora;
 import managedbeans.Categoria;
 
