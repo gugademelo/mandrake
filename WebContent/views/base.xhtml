@@ -12,10 +12,21 @@
 </h:head>
 <h:body>
 	<section class="page-container">
-		<div id="header">
+		<div class="header-container">
 			<ui:insert name="header" >
-				<p>header que ta no base</p>
-			</ui:insert> </div>
+				<ui:include src="templates/defaults/header.xhtml" />
+			</ui:insert> 
+		</div>
+		<div class="main-content-container">
+			<ui:insert name="content">
+				<ui:include src="templates/defaults/content.xhtml" />
+			</ui:insert>
+		</div>
+		<div class="footer-container">
+			<ui:insert name="footer">
+				<ui:include src="templates/defaults/footer.xhtml" />
+			</ui:insert>
+		</div>	
 	</section>
 </h:body>
 </html>

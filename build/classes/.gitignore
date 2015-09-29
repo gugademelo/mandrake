@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-/messages/
-/resources/
-=======
-/ManagedBeans/
-/DataBase/
 /database/
 /managedbeans/
->>>>>>> a9b5787025153fca22534e685cec78681524ca54
+/messages/
+/DAO/
+/TO/
