@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import DAO.LivroDAO;
 import TO.Livro;
 import managedbeans.Venda;
 import database.ConnectionFactory;
@@ -37,7 +38,7 @@ public class ItemVenda {
 		this.venda = venda;
 	}
 	public void setLivroPeloId(int id_livro) {		
-		this.livro =  Livro.getLivroPeloId(id_livro);
+		this.livro =  LivroDAO.getLivroPeloId(id_livro);
 	}
 	public void setVendaPeloId(int id_venda) {
 		this.venda = Venda.getVendaPeloId(id_venda);;

@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import TO.Livro;
+import TO.Usuario;
 import database.ConnectionFactory;
 
 public class ListaDeDesejos {	
