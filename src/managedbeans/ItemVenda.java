@@ -7,9 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import managedbeans.Livro;
+import TO.Livro;
 import managedbeans.Venda;
-
 import database.ConnectionFactory;
 
 public class ItemVenda {

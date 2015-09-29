@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import TO.Livro;
 import database.ConnectionFactory;
 
 public class ListaDeDesejos {	
