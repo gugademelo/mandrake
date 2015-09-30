@@ -15,8 +15,11 @@ import java.util.Date;
 import java.util.List;
 
 
+
+
+import DAO.UsuarioDAO;
+import TO.Usuario;
 import database.ConnectionFactory;
-import managedbeans.Usuario;
 
 public class Venda {
 	int id_venda;
@@ -27,7 +30,7 @@ public class Venda {
 	
 	public Venda(int id_usuario, String frete, double valor_frete) {
 		super();
-		this.usuario = Usuario.getUsuarioPeloId(id_usuario);
+		this.usuario = UsuarioDAO.getUsuarioPeloId(id_usuario);
 		this.frete = frete;
 		this.valor_frete = valor_frete;
 	}
@@ -88,7 +91,7 @@ public class Venda {
 		return this.usuario;
 	}
 	public void setUsuario(int id_usuario) {
-		this.usuario = Usuario.getUsuarioPeloId(id_usuario);
+		this.usuario = UsuarioDAO.getUsuarioPeloId(id_usuario);
 	}
 	public String getFrete() {
 		return frete;
