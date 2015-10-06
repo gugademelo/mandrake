@@ -6,7 +6,7 @@
 	<ui:define name="content">
 		<p>Pagina de login</p> 
 		<h:form>
-			<h:commandButton value="#{msgs.btnLogin}"></h:commandButton>
+			<h:commandButton value="#{msgs.btnLogin}" action="#{login.doLogin}"></h:commandButton>
 		</h:form>
 	</ui:define>
 
