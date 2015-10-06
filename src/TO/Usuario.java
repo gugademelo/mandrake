@@ -4,7 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import managedbeans.Perfil;
 import database.ConnectionFactory;
 
 public class Usuario {

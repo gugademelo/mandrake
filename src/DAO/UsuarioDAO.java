@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import TO.Perfil;
 import TO.Usuario;
-import managedbeans.Perfil;
 import database.ConnectionFactory;
 
 public class UsuarioDAO {
@@ -98,7 +98,7 @@ public class UsuarioDAO {
 			Usuario usuario = null;
 
 			if (rs.next()) {
-				Perfil perfil = Perfil.getPerfilPeloId(rs.getInt("id_perfil"));
+				Perfil perfil = PerfilDAO.getPerfilPeloId(rs.getInt("id_perfil"));
 				 usuario = new Usuario(rs.getInt("id_usuario"),
 						rs.getString("nome"), rs.getString("email"),
 						rs.getString("senha"), perfil);
@@ -133,7 +133,7 @@ public class UsuarioDAO {
 			usuarios = new ArrayList<Usuario>();
 
 			while (rs.next()) {
-				Perfil perfil = Perfil.getPerfilPeloId(rs.getInt("id_perfil"));
+				Perfil perfil = PerfilDAO.getPerfilPeloId(rs.getInt("id_perfil"));
 				Usuario usuario = new Usuario(Integer.parseInt(rs
 						.getString("id_usuario")), rs.getString("nome"),
 						rs.getString("email"), rs.getString("senha"), perfil);
@@ -165,7 +165,7 @@ public class UsuarioDAO {
 			Usuario usuario = null;
 
 			if (rs.next()) {
-				Perfil perfil = Perfil.getPerfilPeloId(rs.getInt("id_perfil"));
+				Perfil perfil = PerfilDAO.getPerfilPeloId(rs.getInt("id_perfil"));
 				 usuario = new Usuario(Integer.parseInt(rs
 						.getString("id_usuario")), rs.getString("nome"),
 						rs.getString("email"), rs.getString("senha"), perfil);

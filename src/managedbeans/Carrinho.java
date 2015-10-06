@@ -1,11 +1,13 @@
 package managedbeans;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import TO.Livro;
+import javax.faces.bean.*;
 
+
+
+@ManagedBean(name= "CarrinhoBean")
 public class Carrinho {
 	private List<Livro> livros = new ArrayList<Livro>();
 	private double subTotal;
