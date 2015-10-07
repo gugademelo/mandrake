@@ -12,17 +12,19 @@ private Integer autor_Id, qtdLivros;
 	private String nome, sobrenome, principalLivro, endereco, telefone, email, rg, obs; 
 	private Date dtNascimento;
 	
+	
 <h:form>
-#{msg.labelCPF} <h:inputText value="#{autorBean.}"/><br/>
-#{msg.labelPeso} <h:inputText value="#{imcBean.dadosSaude.peso}"/><br/>
-#{msg.labelAltura} <h:inputText value="#{imcBean.dadosSaude.altura}"/><br/>
-#{msg.labelCPF} <h:inputText value="#{autorBean.}"/><br/>
-#{msg.labelPeso} <h:inputText value="#{imcBean.dadosSaude.peso}"/><br/>
-#{msg.labelAltura} <h:inputText value="#{imcBean.dadosSaude.altura}"/><br/>
-#{msg.labelCPF} <h:inputText value="#{autorBean.}"/><br/>
-#{msg.labelPeso} <h:inputText value="#{imcBean.dadosSaude.peso}"/><br/>
-#{msg.labelAltura} <h:inputText value="#{imcBean.dadosSaude.altura}"/><br/>
-<h:commandButton value="#{msg.botaoCalcular}" action="#{imcBean.calcular}"/>
+#{msg.labelautor_Id} <h:inputText value="#{autorBean.autor.autor_Id}"/><br/>
+#{msg.labelqtdLivros} <h:inputText value="#{autorBean.autor.qtdLivros}"/><br/>
+#{msg.labelnome} <h:inputText value="#{autorBean.autor.nome}"/><br/>
+#{msg.labelsobrenome} <h:inputText value="#{autorBean.autor.sobrenome}"/><br/>
+#{msg.labelprincipalLivro} <h:inputText value="#{autorBean.autor.principalLivro}"/><br/>
+#{msg.labelendereco} <h:inputText value="#{autorBean.autor.endereco}"/><br/>
+#{msg.labeltelefone} <h:inputText value="#{autorBean.autor.telefone}"/><br/>
+#{msg.labelemail} <h:inputText value="#{autorBean.autor.email}"/><br/>
+#{msg.labelrg} <h:inputText value="#{autorBean.autor.rg}"/><br/>
+#{msg.labelobs} <h:inputText value="#{autorBean.autor.obs}"/><br/>
+#{msg.labeldtNascimento} <h:inputText value="#{autorBean.autor.dtNascimento}"/><br/>
 </h:form>
 </h:body>
 </html>
