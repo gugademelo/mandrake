@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Editora</title>
+</h:head>
+<h:body>
+private Integer id,cep,fone,cnpj;
+	private String nome, endereco, cidade, uf, pais,razaoSocial,web;
+<h:form>
+#{msg.labelcepEditora} <h:inputText value="#{editoraBean.editora.cep}"/><br/>
+#{msg.labelTelEditora} <h:inputText value="#{editoraBean.editora.fone}"/><br/>
+#{msg.labelCnpjEditora} <h:inputText value="#{editoraBean.editora.cnpj}"/><br/>
+#{msg.labelNomeEditora} <h:inputText value="#{editoraBean.editora.nome}"/><br/>
+#{msg.labelEnderecoEditora} <h:inputText value="#{editoraBean.editora.endereco}"/><br/>
+#{msg.labelCidadeEditora} <h:inputText value="#{editoraBean.editora.cidade}"/><br/>
+#{msg.labelUfEditora} <h:inputText value="#{editoraBean.editora.uf}"/><br/>
+#{msg.labelPaisEditora} <h:inputText value="#{editoraBean.editora.pais}"/><br/>
+#{msg.labelrazaoEditora} <h:inputText value="#{editoraBean.editora.razaoSocial}"/><br/>
+#{msg.labelWebEditora} <h:inputText value="#{editoraBean.editora.web}"/><br/>
+
+<h:commandButton value="#{msg.btnInsereEditora}" action="#{editoraBean.insereEditora}"></h:commandButton>
+</h:form>
+</h:body>
+</html>

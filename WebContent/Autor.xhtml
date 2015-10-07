@@ -8,11 +8,6 @@
 </h:head>
 <h:body>
 
-private Integer autor_Id, qtdLivros;
-	private String nome, sobrenome, principalLivro, endereco, telefone, email, rg, obs; 
-	private Date dtNascimento;
-	
-	
 <h:form>
 #{msg.labelautor_Id} <h:inputText value="#{autorBean.autor.autor_Id}"/><br/>
 #{msg.labelqtdLivros} <h:inputText value="#{autorBean.autor.qtdLivros}"/><br/>
@@ -25,6 +20,8 @@ private Integer autor_Id, qtdLivros;
 #{msg.labelrg} <h:inputText value="#{autorBean.autor.rg}"/><br/>
 #{msg.labelobs} <h:inputText value="#{autorBean.autor.obs}"/><br/>
 #{msg.labeldtNascimento} <h:inputText value="#{autorBean.autor.dtNascimento}"/><br/>
+
+<h:commandButton value="#{msg.btnInsereAutor}" action="#{AutorBean.insereAutor}"></h:commandButton>
 </h:form>
 </h:body>
 </html>
