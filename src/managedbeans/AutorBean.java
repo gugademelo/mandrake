@@ -2,7 +2,6 @@ package managedbeans;
 
 import javax.faces.bean.*;
 
-import br.com.fiap.si.dao.DadosSaudeDAO;
 import TO.Autor;
 
 
