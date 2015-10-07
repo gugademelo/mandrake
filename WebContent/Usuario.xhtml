@@ -9,12 +9,12 @@
 <h:body>
 
 <h:form>
-#{msg.labelnomeUsuario} <h:inputText value="#{usuarioBean.usuario.nome}"/><br/>
-#{msg.labelEmailUsuario} <h:inputText value="#{usuarioBean.usuario.email}"/><br/>
-#{msg.labelSenhaUsuario} <h:inputText value="#{usuarioBean.usuario.senha}"/><br/>
-#{msg.labelPerfilUsuario} <h:inputText value="#{usuarioBean.usuario.perfil.perfil}"/><br/>
+#{msg.labelnomeUsuario} <h:inputText value="#{UsuarioBean.usuario.nome}"/><br/>
+#{msg.labelEmailUsuario} <h:inputText value="#{UsuarioBean.usuario.email}"/><br/>
+#{msg.labelSenhaUsuario} <h:inputText value="#{UsuarioBean.usuario.senha}"/><br/>
+#{msg.labelPerfilUsuario} <h:inputText value="#{UsuarioBean.usuario.perfil.perfil}"/><br/>
 
-<h:commandButton value="#{msg.btnInsereUsuario}" action="#{AutorBean.insereUsuario}"></h:commandButton>
+<h:commandButton value="#{msg.btnInsereUsuario}" action="#{UsuarioBean.insereUsuario}"></h:commandButton>
 </h:form>
 </h:body>
 </html>
