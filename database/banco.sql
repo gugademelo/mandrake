@@ -1,5 +1,5 @@
-create database nicenes;
-use nicenes;
+create database mandrake;
+use mandrake;
 create table perfil (
 	id_perfil int not null auto_increment,
     nome varchar(255),
@@ -15,16 +15,11 @@ CREATE TABLE usuario (
     foreign key (id_perfil) references perfil (id_perfil)
 );
 
-insert into perfil(nome) values("Adm");
-insert into perfil(nome) values("Visitante");
-insert into usuario(nome,email,senha,id_perfil) values ("UserTeste","admin@admin","admin",1);
-
 create table categoria (
 	id_categoria int not null auto_increment,
     categoria varchar(255),
     primary key (id_categoria)
 );
-
 
 create table editora(
 	id_editora int not null auto_increment,
@@ -77,8 +72,6 @@ create table livro (
     REFERENCES categoria (id_categoria)
 );
 
-
-
 create table venda(
 	id_venda int not null auto_increment,
     frete varchar(255),
@@ -105,4 +98,6 @@ create table lista_desejo(
     foreign key(id_usuario) references usuario(id_usuario)
 );
 
-insert into autor values(null,'Dan', 'Brown', 'O CÃ³digo Da Vinci', 'Exeter. Nova Hampshire', '857645632', 'dan_brown@hotmail.com', '3777652608', CURDATE(), 'Sem obs', 55);
+insert into perfil (nome) values ('admin');
+insert into usuario (nome, email, senha, id_perfil) values ('admin', 'admin', 'admin', 1);
+insert into autor values(null,'Dan', 'Brown', 'O Código Da Vinci', 'Exeter. Nova Hampshire', '857645632', 'dan_brown@hotmail.com', '3777652608', CURDATE(), 'Sem obs', 55);

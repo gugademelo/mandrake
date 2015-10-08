@@ -13,16 +13,24 @@ public class ConnectionFactory {
 		String url = "jdbc:mysql://"+ server + "/" + database;
 		
 		Connection con;
+		String test = "com.mysql.jdbc.Driver";
 		try {
-			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+			
+			try {
+				Class.forName(test);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			con = DriverManager.getConnection(url, user, pass);
 			return con;
 		} catch (SQLException e) {
 			try {
-				pass = "";
-				DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-				con = DriverManager.getConnection(url, user, pass);
-				return con;
+				//pass = "";
+				//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+				//con = DriverManager.getConnection(url, user, pass);
+				//return con;
 			} catch (Exception e2) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

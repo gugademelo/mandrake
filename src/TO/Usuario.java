@@ -4,12 +4,18 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 import database.ConnectionFactory;
 
+@SessionScoped
+@ManagedBean
 public class Usuario {
 	private String nome, email, senha;
 	private int id;
 	private Perfil perfil;
+	private boolean looged=false;
 
 	public Usuario(int id, String nome, String email, String senha,
 			Perfil perfil) {
@@ -56,6 +62,14 @@ public class Usuario {
 		this.id = id;
 	}
 
+	public Perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
+	}
+	
 	public Perfil getPerfil() {
 		return perfil;
 	}
