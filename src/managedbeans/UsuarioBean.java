@@ -9,5 +9,9 @@ import TO.Usuario;
 @ManagedBean(name= "UsuarioBean")
 public class UsuarioBean {
 
-	Usuario usuario = new Usuario();
+	private Usuario usuario = new Usuario();
+	
+
+	
+	
 }
