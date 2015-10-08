@@ -6,10 +6,13 @@ import TO.Usuario;
 import DAO.UsuarioDAO;
 
 @ManagedBean
-public class Login {
+@SessionScoped
+public class UserSession {
 	
 	private String email;
 	private String pass;
+	private Usuario usuario;
+	private boolean active;
 	
 	public String getEmail() {
 		return email;
@@ -27,11 +30,15 @@ public class Login {
 		this.pass = pass;
 	}
 	
+	
+	
 	public String doLogin() {
-		Usuario usuario = new UsuarioDAO().login(email, pass);
-		if (usuario) {
+		
+		this.usuario = new UsuarioDAO().login(email, pass);
+		
+		//if (usuario) {
 			
-		}
+		//}
 		setEmail("teste");
 		setPass("teste2");
 		return "index";

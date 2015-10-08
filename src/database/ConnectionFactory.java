@@ -12,30 +12,30 @@ public class ConnectionFactory {
 		String pass = "fiap";
 		String url = "jdbc:mysql://"+ server + "/" + database;
 		
-		Connection con;
-		String test = "com.mysql.jdbc.Driver";
+		Connection con=null;
+		String dirverString = "com.mysql.jdbc.Driver";
+		
 		try {
-			
-			try {
-				Class.forName(test);
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+			Class.forName(dirverString);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		try {
 			con = DriverManager.getConnection(url, user, pass);
-			return con;
 		} catch (SQLException e) {
 			try {
-				//pass = "";
-				//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-				//con = DriverManager.getConnection(url, user, pass);
-				//return con;
-			} catch (Exception e2) {
-				// TODO Auto-generated catch block
+				pass="";
+				con = DriverManager.getConnection(url, user, pass);
+			} catch (SQLException e2) {
 				e.printStackTrace();
-				return null;
 			}
 		}
+		return con;
+		//DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+			
+				
 	}
 }
