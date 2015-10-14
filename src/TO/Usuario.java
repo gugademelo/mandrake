@@ -70,11 +70,4 @@ public class Usuario {
 		this.perfil = perfil;
 	}
 	
-	public Perfil getPerfil() {
-		return perfil;
-	}
-
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
 }
