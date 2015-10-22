@@ -25,8 +25,9 @@ public class AutorDAO {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, autor.getNome());
 			st.setString(2, autor.getSobrenome());
-			java.sql.Date sqlData = new java.sql.Date(autor.getDtNascimento().getTime());
-			st.setDate(3, sqlData);
+			st.setString(3,autor.getDtNascimento());
+			//java.sql.Date sqlData = new java.sql.Date(autor.getDtNascimento().getTime());
+			//st.setDate(3, sqlData);
 			st.setString(4, autor.getPrincipalLivro());
 			st.setString(5, autor.getEndereco());
 			st.setString(6, autor.getTelefone());
@@ -56,8 +57,9 @@ public class AutorDAO {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, autor.getNome());
 			st.setString(2, autor.getSobrenome());
-			java.sql.Date sqlData = new java.sql.Date(autor.getDtNascimento().getTime());
-			st.setDate(3, sqlData);
+			st.setString(3, autor.getDtNascimento());
+			/*java.sql.Date sqlData = new java.sql.Date(autor.getDtNascimento().getTime());
+			st.setDate(3, sqlData);*/
 			st.setString(4, autor.getPrincipalLivro());
 			st.setString(5, autor.getEndereco());
 			st.setString(6, autor.getTelefone());

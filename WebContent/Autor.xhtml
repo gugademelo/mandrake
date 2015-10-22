@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 		xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
@@ -9,19 +10,18 @@
 <h:body>
 
 <h:form>
-#{msgs.labelautor_Id} <h:inputText value="#{autorBean.autor.autor_Id}"/><br/>
-#{msgs.labelqtdLivros} <h:inputText value="#{autorBean.autor.qtdLivros}"/><br/>
-#{msgs.labelnome} <h:inputText value="#{autorBean.autor.nome}"/><br/>
-#{msgs.labelsobrenome} <h:inputText value="#{autorBean.autor.sobrenome}"/><br/>
-#{msgs.labelprincipalLivro} <h:inputText value="#{autorBean.autor.principalLivro}"/><br/>
-#{msgs.labelendereco} <h:inputText value="#{autorBean.autor.endereco}"/><br/>
-#{msgs.labeltelefone} <h:inputText value="#{autorBean.autor.telefone}"/><br/>
-#{msgs.labelemail} <h:inputText value="#{autorBean.autor.email}"/><br/>
-#{msgs.labelrg} <h:inputText value="#{autorBean.autor.rg}"/><br/>
-#{msgs.labelobs} <h:inputText value="#{autorBean.autor.obs}"/><br/>
-#{msgs.labeldtNascimento} <h:inputText value="#{autorBean.autor.dtNascimento}"/><br/>
+#{msgs.labelqtdLivros} <h:inputText value="#{AutorBean.autor.qtdLivros}"/><br/>
+#{msgs.labelnome} <h:inputText value="#{AutorBean.autor.nome}"/><br/>
+#{msgs.labelsobrenome} <h:inputText value="#{AutorBean.autor.sobrenome}"/><br/>
+#{msgs.labelprincipalLivro} <h:inputText value="#{AutorBean.autor.principalLivro}"/><br/>
+#{msgs.labelendereco} <h:inputText value="#{AutorBean.autor.endereco}"/><br/>
+#{msgs.labeltelefone} <h:inputText value="#{AutorBean.autor.telefone}"/><br/>
+#{msgs.labelemail} <h:inputText value="#{AutorBean.autor.email}"/><br/>
+#{msgs.labelrg} <h:inputText value="#{AutorBean.autor.rg}"/><br/>
+#{msgs.labelobs} <h:inputText value="#{AutorBean.autor.obs}"/><br/>
+#{msgs.labeldtNascimento} <h:inputText value="#{AutorBean.autor.dtNascimento}"/><br/>
 
-<h:commandButton value="#{msgs.btnInsereAutor}" action="#{autorBean.insereAutor}"></h:commandButton>
+<h:commandButton value="#{msgs.btnInsereAutor}" action="#{AutorBean.InsereAutor}"></h:commandButton>
 </h:form>
 </h:body>
 </html>

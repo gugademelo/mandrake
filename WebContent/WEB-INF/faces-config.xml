@@ -14,5 +14,22 @@
 			<default-locale>en</default-locale>
 		</locale-config>
 	</application>
+	
+	<managed-bean>
+		<managed-bean-name>AutorBean</managed-bean-name>
+		<managed-bean-class>managedbeans.AutorBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>CategoriaBean</managed-bean-name>
+		<managed-bean-class>managedbeans.CategoriaBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>EditoraBean</managed-bean-name>
+		<managed-bean-class>managedbeans.EditoraBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>

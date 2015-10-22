@@ -13,6 +13,16 @@ public class CategoriaBean {
 	private Categoria categoria = new Categoria();
 	CategoriaDAO dao = new CategoriaDAO();
 	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+
+
 	public void InsereCategoria()
 	{
 		dao.salva(categoria);

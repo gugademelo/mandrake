@@ -13,17 +13,18 @@ import database.ConnectionFactory;
 public class Autor {
 	private Integer autor_Id, qtdLivros;
 	private String nome, sobrenome, principalLivro, endereco, telefone, email, rg, obs; 
-	private Date dtNascimento;
+	//private Date dtNascimento;
+	private String dtNascimento;
 	
 	public Autor()
 	{
 	
 	}
-	
+
 	public Autor(Integer autor_Id, Integer qtdLivros, String nome,
 			String sobrenome, String principalLivro, String endereco,
 			String telefone, String email, String rg, String obs,
-			Date dtNascimento) {
+			String dtNascimento) {
 		super();
 		this.autor_Id = autor_Id;
 		this.qtdLivros = qtdLivros;
@@ -37,7 +38,9 @@ public class Autor {
 		this.obs = obs;
 		this.dtNascimento = dtNascimento;
 	}
-	
+
+
+
 
 	public Integer getAutor_Id() {
 		return autor_Id;
@@ -99,12 +102,20 @@ public class Autor {
 	public void setObs(String obs) {
 		this.obs = obs;
 	}
+	
+	public String getDtNascimento() {
+		return dtNascimento;
+	}
+	public void setDtNascimento(String dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+	/*
 	public Date getDtNascimento() {
 		return dtNascimento;
 	}
 	public void setDtNascimento(Date dtNascimento) {
 		this.dtNascimento = dtNascimento;
-	}
+	}*/
 	
 	
 }
