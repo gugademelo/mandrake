@@ -111,11 +111,13 @@ public class AutorDAO {
 			    rs.getString("email"),
 				rs.getString("rg"),
 				rs.getString("obs"),
+				rs.getString("dtNascimento"));
+				/*
 				new java.util.Date());
 				
 				java.util.Date date = rs.getDate("dt_nascimento");
 				autor.setDtNascimento(date);				
-				
+				*/
 				autores.add(autor);
 			}
 			
@@ -158,12 +160,14 @@ public class AutorDAO {
 				    rs.getString("email"),
 					rs.getString("rg"),
 					rs.getString("obs"),
+					rs.getString("dtNascimento"));
+					/*
 					new java.util.Date());
 					
 					java.util.Date date = rs.getDate("dt_nascimento");
 					autor.setDtNascimento(date);				
 
-				
+				*/
 				
 			}
 			
