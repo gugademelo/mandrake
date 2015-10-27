@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+<h:body>
+<h:form>
+<ui:fragment rendered="#{CategoriaBean.listaCategoria.size() > 0}">
+<table>
+	<tr><th>Categoria</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+	<ui:repeat var="d" value="#{CategoriaBean.listaCategoria}">
+		<tr>
+			<td>#{d.categoria}</td>
+			<td>
+				<h:commandLink value="Alterar" action="#{CategoriaBean.alterar}">
+					<f:setPropertyActionListener target="#{CategoriaBean.categoria.categoria_id}" value="#{d.categoria_id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+			</td>
+			<td>
+				<h:commandLink value="Excluir" action="#{CategoriaBean.excluir}">
+					<f:setPropertyActionListener target="#{CategoriaBean.categoria.categoria_id}" value="#{d.categoria_id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+			</td>
+		</tr>
+	</ui:repeat>	
+</table>
+</ui:fragment>
+</h:form>
+</h:body>
+</html>

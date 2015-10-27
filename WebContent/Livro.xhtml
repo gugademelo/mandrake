@@ -16,9 +16,9 @@
 #{msgs.labelIdiomaLivro} <h:inputText value="#{LivroBean.livro.idioma}"/><br/>
 #{msgs.labelAnoLivro} <h:inputText value="#{LivroBean.livro.preco}"/><br/>
 #{msgs.labelPrecoLivro} <h:inputText value="#{LivroBean.livro.ano}"/><br/>
-#{msgs.labelAutorLivro} <h:inputText value="#{LivroBean.livro.Autor.autor_Id}"/><br/>
-#{msgs.labelEditoraLivro} <h:inputText value="#{LivroBean.livro.editora.id}"/><br/>
-#{msgs.labelCategoriaLivro} <h:inputText value="#{LivroBean.livro.categoria.categoria_id}"/><br/>
+#{msgs.labelAutorLivro} <h:inputText value="#{LivroBean.livro.autor.nome}"/><br/>
+#{msgs.labelEditoraLivro} <h:inputText value="#{LivroBean.livro.nome}"/><br/>
+#{msgs.labelCategoriaLivro} <h:inputText value="#{LivroBean.livro.categoria.categoria}"/><br/>
 
 <h:commandButton value="#{msgs.btnInsereLivro}" action="#{LivroBean.InsereLivro}"></h:commandButton>
 </h:form>
