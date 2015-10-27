@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+<h:body>
+<h:form>
+<ui:fragment rendered="#{AutorBean.listaAutor.size() > 0}">
+<table>
+	<tr>
+		<th>Nome</th>
+		<th>Sobrenome</th>
+		<th>Principal Livro</th>
+		<th>Endereco</th>
+		<th>Telefone</th>
+		<th>Email</th>
+		<th>Rg</th>
+		<th>Data de Nascimento</th>
+		<th>Observações</th>
+		<th>Qtd. Livros</th>
+		<th>Opções</th>
+	</tr>
+	
+	<ui:repeat var="autor" value="#{AutorBean.listaAutor}">
+		<tr>
+				<td>#{autor.nome}</td>
+				<td>#{autor.sobrenome}</td>
+				<td>#{autor.principalLivro}</td>
+				<td>#{autor.endereco}</td>
+				<td>#{autor.telefone}</td>
+				<td>#{autor.email}</td>
+				<td>#{autor.rg}</td>
+				<td>tst</td>
+				<td>#{autor.obs}</td>
+				<td>#{autor.qtdLivros }</td>
+				<td>
+				<h:commandLink value="Alterar" action="#{AutorBean.alterar}">
+					<f:setPropertyActionListener target="#{AutorBean.autor.autor_Id}" value="#{d.autor_Id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+				|
+				<h:commandLink value="Excluir" action="#{AutorBean.excluir}">
+					<f:setPropertyActionListener target="#{AutorBean.autor.autor_Id}" value="#{d.autor_Id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+			</td>
+		</tr>
+	</ui:repeat>
+	
+	
+</table>
+</ui:fragment>
+</h:form>
+</h:body>
+</html>

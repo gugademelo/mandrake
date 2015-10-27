@@ -111,7 +111,7 @@ public class AutorDAO {
 			    rs.getString("email"),
 				rs.getString("rg"),
 				rs.getString("obs"),
-				rs.getString("dtNascimento"));
+				rs.getString("dt_Nascimento"));
 				/*
 				new java.util.Date());
 				
