@@ -55,6 +55,7 @@ public class AutorBean {
 		
 		AutorDAO dao = new AutorDAO();
 		
+		System.out.println(autor.getAutor_Id());
 		if (dao.exclui(autor.getAutor_Id())) {
 			return "resultado";
 		} else {

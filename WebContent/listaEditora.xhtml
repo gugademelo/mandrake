@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+<h:body>
+<h:form>
+<ui:fragment rendered="#{EditoraBean.listaEditora.size() > 0}">
+<table>
+			<tr>
+			<th>Nome</th>
+			<th>Endereco</th>
+			<th>Cidade</th>
+			<th>UF</th>
+			<th>Pais</th>
+			<th>Cep</th>
+			<th>Fone</th>
+			<th>Cnpj</th>
+			<th>Razao Social</th>
+			<th>Web</th>
+			<th>Opções</th>
+		</tr>
+		
+					
+	<ui:repeat var="editora" value="#{EditoraBean.listaEditora}">
+			<tr>
+				<td>#{editora.nome}</td>
+				<td>#{editora.endereco}</td>
+				<td>#{editora.cidade}</td>
+				<td>#{editora.uf}</td>
+				<td>#{editora.pais}</td>
+				<td>#{editora.cep}</td>
+				<td>#{editora.fone}</td>
+				<td>#{editora.cnpj}</td>
+				<td>#{editora.razaoSocial}</td>
+				<td>#{editora.web }</td>
+				<td>
+				<h:commandLink value="Alterar" action="#{EditoraBean.alterar}">
+					<f:setPropertyActionListener target="#{EditoraBean.editora.id}" value="#{editora.id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+				|
+				<h:commandLink value="Excluir" action="#{EditoraBean.excluir}">
+					<f:setPropertyActionListener target="#{EditoraBean.editora.id}" value="#{editora.id}"></f:setPropertyActionListener> 
+				</h:commandLink>
+				</td>
+			</tr>
+	</ui:repeat>
+	
+				
+	
+	
+	
+</table>
+</ui:fragment>
+</h:form>
+</h:body>
+</html>
