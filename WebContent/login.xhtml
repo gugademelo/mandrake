@@ -4,13 +4,20 @@
 	template="base.xhtml">
 	
 	<ui:define name="content">
-		<p>Pagina de login</p> 
+		<p>Pagina de login/LogOff</p>
+		<ui:fragment rendered="#{UsuarioBean.usuario.id == 0}"> 
 		<h:form>
-			<h:commandButton value="#{msgs.btnLogin}" action="#{login.doLogin}"></h:commandButton>
+			#{msgs.labelcepEditora} <h:inputText value="#{UsuarioBean.usuario.nome}"/><br/>
+			#{msgs.labelTelEditora} <h:inputText value="#{UsuarioBean.usuario.senha}"/><br/>
+			<h:commandButton value="#{msgs.btnLogin}" action="#{UsuarioBean.doLogin}"></h:commandButton>
 			<h:commandButton value="#{msgs.btnListaCategoria}" action="#{CategoriaBean.listar}"></h:commandButton>
 			<h:commandButton value="#{msgs.btnListaAutor}" action="#{AutorBean.listar}"></h:commandButton>
 			<h:commandButton value="#{msgs.btnListaEditora}" action="#{EditoraBean.listar}"></h:commandButton>			
 		</h:form>
+		</ui:fragment>
+		<ui:fragment rendered="#{UsuarioBean.usuario.id != 0}">
+			<h:commandButton value="LogOff" action="#{UsuarioBean.logoff}"></h:commandButton>
+		</ui:fragment> 
 	</ui:define>
 
 </ui:composition>

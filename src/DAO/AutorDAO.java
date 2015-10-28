@@ -19,7 +19,7 @@ public class AutorDAO {
 			return false;	
 		}
 
-		String sql = "INSERT INTO autor (nome, sobrenome, dt_nascimento, principal_livro, endereco, telefone, email, rg, obs, qtd_livros) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO autor (nome, sobrenome, dtnascimento, principal_livro, endereco, telefone, email, rg, obs, qtd_livros) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try {
 			PreparedStatement st = con.prepareStatement(sql);
@@ -52,7 +52,7 @@ public class AutorDAO {
 		if(con == null){
 			return false;	
 		}
-		String sql = "UPDATE autor SET nome = ?, sobrenome = ?, dt_nascimento = ?, principal_livro = ?, endereco = ?, telefone = ?, email = ?, rg = ?, obs = ?, qtd_livros = ? WHERE id_autor = ?";
+		String sql = "UPDATE autor SET nome = ?, sobrenome = ?, dtnascimento = ?, principal_livro = ?, endereco = ?, telefone = ?, email = ?, rg = ?, obs = ?, qtd_livros = ? WHERE id_autor = ?";
 		try{
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, autor.getNome());

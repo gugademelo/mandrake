@@ -30,8 +30,12 @@ public class AutorBean {
 
 	public String insereAutor(){		
 		
+		boolean result = true;
 		
-		if (dao.salva(autor)) {
+	
+		result = dao.salva(autor);
+		
+		if (result) {
 			return "resultado";			
 		}else{
 			return "erro";

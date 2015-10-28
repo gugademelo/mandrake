@@ -36,7 +36,7 @@ public class UsuarioDAO {
 			st.setString(1, usuario.getNome());
 			st.setString(2, usuario.getEmail());
 			st.setString(3, usuario.getSenha());
-			st.setInt(4, usuario.getPerfil().getId());
+			st.setInt(4, 2);
 			
 			if(id != 0) {
 				st.setInt(5, id);
